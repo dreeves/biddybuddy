@@ -1,0 +1,176 @@
+/* We're getting most of our CSS from latex.css */
+
+:root {
+  --primary: #006495;
+  --on-primary:#ffffff;
+  --primary-container: #cbe6ff;
+  --on-primary-container: #001e30;
+  --secondary: #8f4e00;
+  --on-secondary: #ffffff;
+  --secondary-container: #ffdcc2;
+  --on-secondary-container: #2e1500;
+  --tertiary: #66587b;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #ecdcff;
+  --on-tertiary-container: #211634;
+  --background: #fcfcff;
+  --on-background: #1a1c1e;
+  --surface: #fcfcff;
+  --on-surface: #1a1c1e;
+  --on-surface-rgb: 26 28 30;
+  --outline: #72787e;
+  --surface-variant: #dee3ea;
+  --on-surface-variant: #41474d;
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #410002;
+  --elevation-0: 0px 0px 0px 0px rgb(0 0 0 / 0.2), 0px 0px 0px 0px rgb(0 0 0 / 0.14), 0px 0px 0px 0px rgb(0 0 0 / 0.12);
+  --elevation-1:;
+}
+/*
+:where(html) {
+  --md-sys-elevation-0: 0px 0px 0px 0px rgb(var(--md-sys-color-shadow-rgb) / 0.2), 0px 0px 0px 0px rgb(var(--md-sys-color-shadow-rgb) / 0.14), 0px 0px 0px 0px rgb(var(--md-sys-color-shadow-rgb) / 0.12);
+    --md-sys-elevation-1: 0px 3px 1px -2px rgb(var(--md-sys-color-shadow-rgb) / 0.2), 0px 2px 2px 0px rgb(var(--md-sys-color-shadow-rgb) / 0.14), 0px 1px 5px 0px rgb(var(--md-sys-color-shadow-rgb) / 0.12);
+    --md-sys-elevation-2: 0px 2px 4px -1px rgb(var(--md-sys-color-shadow-rgb) / 0.2), 0px 4px 5px 0px rgb(var(--md-sys-color-shadow-rgb) / 0.14), 0px 1px 10px 0px rgb(var(--md-sys-color-shadow-rgb) / 0.12);
+    --md-sys-elevation-3: 0px 5px 5px -3px rgb(var(--md-sys-color-shadow-rgb) / 0.2), 0px 8px 10px 1px rgb(var(--md-sys-color-shadow-rgb) / 0.14), 0px 3px 14px 2px rgb(var(--md-sys-color-shadow-rgb) / 0.12);
+    --md-sys-elevation-4: 0px 5px 5px -3px rgb(var(--md-sys-color-shadow-rgb) / 0.2), 0px 8px 10px 1px rgb(var(--md-sys-color-shadow-rgb) / 0.14), 0px 3px 14px 2px rgb(var(--md-sys-color-shadow-rgb) / 0.12);
+    --md-sys-elevation-5: 0px 8px 10px -6px rgb(var(--md-sys-color-shadow-rgb) / 0.2), 0px 16px 24px 2px rgb(var(--md-sys-color-shadow-rgb) / 0.14), 0px 6px 30px 5px rgb(var(--md-sys-color-shadow-rgb) / 0.12);
+}
+*/
+body {
+  background-color: var(--background);
+  color: var(--on-background);
+  font-size: 19px; /* bigger than latex.css's default */
+}
+
+/* Fancy distinctive display of examples of text the user can type */
+code {
+  padding: 2px 4px;
+  color: var(--on-tertiary-container);
+  white-space: nowrap;
+  background-color: var(--tertiary-container);
+  border: 1px solid var(--outline);
+}
+
+/* Put the version in itty-bitty gray font in the bottom corner of the page */
+.versiontag {
+  /* color: hsla(17deg 13% 19% 20%); */
+  color: var(--outline);
+  font-size: 9px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/* TODO: Make the undo count be a tiny subscript on the undo button */
+#ucount {
+  color: var(--outline);
+  font-size: 9px;
+  /*text-align */
+}
+
+input, button {
+  font-size: 1.5rem;
+}
+
+input { 
+  height: 38px;
+  padding: 10px;
+  width: 45%;
+  max-width: 165px;
+}
+.material-symbols-outlined {
+  vertical-align: text-bottom;
+  font-size: 2rem;
+  font-weight: bold;
+}
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 33.333333333333%;
+  float: left;
+  transition: box-shadow 0.2s ease-in-out 0s;
+  box-shadow: var(--elevation-0);
+}
+.btn-fab {
+  color: var(--on-primary);
+  background-color: var(--primary);
+}
+button:hover {
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 0.2), 0px 2px 2px 0px rgb(0 0 0 / 0.14), 0px 1px 5px 0px rgb(0 0 0 / 0.12);
+}
+button:disabled {
+  box-shadow: var(--elevation-0);
+  background-color: rgb(var(--on-surface-rgb) / 0.12);
+  color: rgb(var(--on-surface-rgb) / 0.38);
+}
+.btn-tonal {
+  background-color: var(--primary-container);
+  color: var(--on-primary-container);
+  }
+.btn-tonal-secondary {
+  color: var(--on-secondary-container);
+  background-color: var(--secondary-container);
+  float: none;
+}
+
+/* Lifted this tooltip CSS from W3schools; looks pretty good I think */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/******************************************************************************/
+/******************************** SCRATCH AREA ********************************/
+/******************************************************************************/
+
+
+
+/* @import url('https://fonts.cdnfonts.com/css/hk-groteks'); */
+
+/* :root { --color-bg: #f4f0bb; } */
+
+/*
+body {
+  font-family: HK Grotesk;
+  color: hsl(17deg 13% 19%);
+  background-color: var(--color-bg);
+}
+*/
+
+/* h1 { color: hsl(17deg 13% 19%); } */
