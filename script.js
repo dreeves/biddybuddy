@@ -99,7 +99,7 @@ function tweak(x, dir) {
 // Set the goldilocks number to something between inf and sup.
 function relox(dir=0) {
   lox = isNaN(inf) || isNaN(sup)  ? NaN :
-        inf - sup >= .01          ? "💥" :  // in case inf > sup
+        inf - sup >= .01          ? "> 💥 <" :  // in case inf > sup
                                     tweak(trisamp(inf, sup), dir)
   $('loxval').innerHTML = lox
 }
