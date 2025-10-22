@@ -53,7 +53,7 @@ Newer MathJax:
 </head>
 <body> <!-- alt font: class="libertinus" -->
 
-<div class='versiontag'>v2025.10.21-f &nbsp;</div>
+<div class='versiontag'>v2025.10.21-h &nbsp;</div>
 <div class="content">
 <h1>BiddyBuddy: Introspective Binary Search</h1>
 
@@ -136,7 +136,7 @@ If you can't decide if the Goldilocks number is too high or too low, perfect, th
 <h3>The Gory Details</h3>
 <p>
 BiddyBuddy starts with a lower and upper bound on your possible utility.
-It defaults to 0&ndash;9999 but you can edit those however you like.
+It defaults to <span id="default-bounds"></span> but you can edit those however you like.
 Call those bounds LOW and HIGH.
 The Goldilocks number is always some randomly chosen number between LOW and HIGH, biased toward the middle of the range
 (we use a triangular distribution).

@@ -99,7 +99,7 @@ function tweak(x, dir) {
 // Set the goldilocks number to something between inf and sup.
 function relox(dir=0) {
   lox = isNaN(inf) || isNaN(sup)  ? NaN :
-        inf - sup >= .01          ? "sqrt(-1)" :  // in case inf > sup
+        inf - sup >= .01          ? "💥" :  // in case inf > sup
                                     tweak(trisamp(inf, sup), dir)
   $('loxval').innerHTML = lox
 }
@@ -148,6 +148,8 @@ $('inf').focus() // this can be annoying when developing cuz it steals focus
 // Initialize inf and sup and lox and the blurb
 if (inf !== 0) $('inf').value = inf  // leaving the field blank implies zero
 $('sup').value = sup
+//$('sup').placeholder?
+$('default-bounds').innerHTML = `${MIN}&ndash;${MAX}`
 relox()
 $('actionblurb').innerHTML = blurb
   
