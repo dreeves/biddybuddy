@@ -1,8 +1,8 @@
 // BiddyBuddy: Introspective Binary Search
 
-const MIN =   0 // initial lower bound
-const MAX = 999 // initial upper bound
-const EPS = .01 // smallest amount we can nudge the bounds by but...
+const MIN =    0 // initial lower bound
+const MAX = 9999 // initial upper bound
+const EPS =  .01 // smallest amount we can nudge the bounds by but...
 // ...we've hardcoded roundp(..., 2) to round to 2 decimal places so changing
 // this epsilon from 0.01 doesn't quite work currently.
 
