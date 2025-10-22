@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" 
-  href="https://biddybuddy.dreev.repl.co/dall-e-binary-search.png" />
+<meta charset="utf-8">
+<!-- -------------------- HTML Boilerplate Instructions -------------------- -->
+<!-- 1. Note unDRY title, description, URL, and imgURL -->
+<!-- 2. Use realfavicongenerator.net to generate the ICONS section -->
+<!-- 3. Replace style.css and client.js filenames as needed -->
+<!-- 4. It's fine to throw out lines containing "$OPT" -->
+<!-- 5. Site name displays as additional line in link preview above title -->
+<title>BiddyBuddy: Introspective Binary Search</title>
+<meta name="description"        content="Introspective binary search">
+<meta property="og:description" content="Introspective binary search">
+<meta property="og:title" content="BiddyBuddy">
+<!-- <meta property="og:site_name" content="$OPTSITENAME"> -->
+<meta property="og:type" content="website">
+<link rel="canonical"       href="https://biddybuddy.yootl.es">
+<meta property="og:url"  content="https://biddybuddy.yootl.es">
+<meta property="og:image" content="https://biddybuddy.yootl.es/favicon/apple-touch-icon.png">
+<meta property="og:image:alt" content="BiddyBuddy logo">
+<meta name="twitter:card" content="summary_large_image">
+<!-- <meta name="twitter:site" content="@dreev"> -->
+<meta name="twitter:creator" content="@dreev">
+<meta name="theme-color" content="#54ff93">
+<!-- BEGIN ICONS -->
+<link rel="icon" href="favicon/favicon.ico">
+<link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<!-- END ICONS -->
+<script type="application/ld+json"> {
+"@context": "https://schema.org",
+"@type": "WebSite",
+"name": "BiddyBuddy",
+"alternateName": ["BidBud", "Introspective Binary Search"],
+"url": "https://biddybuddy.yootl.es",
+"image": "https://biddybuddy.yootl.es/favicon/apple-touch-icon.png" }
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" 
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<title>BiddyBuddy: Introspective Binary Search</title>
-
-<!-- Meta tags for SEO and Open Graph link previews -->
-<link rel="canonical" href="https://biddybuddy.dreev.repl.co/" />
-<meta name="description" 
-  content="BiddyBuddy: Introspective binary search for picking your bid" />
-<meta name="robots" content="index,follow" />
-<meta property="og:title" content="BiddyBuddy" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://biddybuddy.dreev.repl.co/" />
-<meta property="og:description" 
-  content="BiddyBuddy: Introspective binary search for picking your bid" />
-<meta property="og:image" 
-  content="https://biddybuddy.dreev.repl.co/dall-e-binary-search.png" />
-<meta name="twitter:card" content="summary" />
-
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-
 <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/bsoule/expost/master/expost.css"/> -->
 <link rel="stylesheet" href="https://latex.now.sh/style.css">
-<link rel="stylesheet" href="style.css" />
-<script src="script.js" defer></script>
+<link rel="stylesheet" href="style.css">
+<!-- Old MathJax, but I guess we're not using MathJax at all currently:
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+Newer MathJax:
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+-->
+<script defer src="script.js"></script>
+<!-- optional preconnect / prefetch go here, eg to load Google fonts faster -->
 </head>
 <body> <!-- alt font: class="libertinus" -->
 
-<div class='versiontag'>v2025.10.21-d &nbsp;</div>
+<div class='versiontag'>v2025.10.21-f &nbsp;</div>
 <div class="content">
 <h1>BiddyBuddy: Introspective Binary Search</h1>
 
@@ -117,7 +136,7 @@ If you can't decide if the Goldilocks number is too high or too low, perfect, th
 <h3>The Gory Details</h3>
 <p>
 BiddyBuddy starts with a lower and upper bound on your possible utility.
-It defaults to 0&ndash;999 but you can edit those however you like.
+It defaults to 0&ndash;9999 but you can edit those however you like.
 Call those bounds LOW and HIGH.
 The Goldilocks number is always some randomly chosen number between LOW and HIGH, biased toward the middle of the range
 (we use a triangular distribution).
@@ -135,16 +154,6 @@ See also bid.yootl.es and auction.morehavoc.com etc.
 </details>
 
 </div> <!-- end content -->
-
-<!--
-This script places a badge on your repl's full-browser view back to your repl's 
-cover page. Try various colors for the theme: dark, light, red, orange, yellow, 
-lime, green, teal, blue, blurple, magenta, pink!
--->
-<!-- 
-<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer>
-</script> 
--->
 
 <script>
 // -----------------------------------------------------------------------------
@@ -167,5 +176,6 @@ if (ancient_browser_check()) {
 }
 // -----------------------------------------------------------------------------
 </script>
+
 </body>
 </html>
